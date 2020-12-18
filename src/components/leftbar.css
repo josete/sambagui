@@ -1,0 +1,19 @@
+.leftbar{
+    height: 100vh;
+    color: white;
+    border-radius: 0 !important;
+}
+
+.shareTitle{
+    display: block;
+    text-decoration: none;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 1;
+    padding-top:1em;
+}
+
+.space{
+    padding: 1em;
+}
