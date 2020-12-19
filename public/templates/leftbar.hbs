@@ -1,0 +1,14 @@
+<div class="ui inverted vertical menu leftbar">
+    <h2 class="shareTitle">Shares</h2>
+    {{#each shares}}
+        <a class="item" href="#">{{this}}</a>
+    {{/each}}    
+    <div class="item">
+        <div class="ui blue inverted indicating progress" id="usedSpace">
+            <div class="bar">
+                <div class="progress"></div>
+            </div>
+            <div class="label">Espacio usado</div>
+        </div>
+    </div>
+</div>
