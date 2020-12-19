@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>SambaGUI</title>
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
-        <link rel="stylesheet" type="text/css" href="../css/leftbar.css" />
-    </head>
-    <body>
+
+<head>
+    <title>SambaGUI</title>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/leftbar.css" />
+</head>
+
+<body>
+    <div class="pushable">
         {{> leftbar}}
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" />
-    </body>
+        {{> files}}
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" ></script>
+    <script>
+        /*$(document).ready(function () {
+            $('.leftbar').sidebar('toggle');
+        });*/
+    </script>
+</body>
+
 </html>

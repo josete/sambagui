@@ -17,3 +17,35 @@
 .space{
     padding: 1em;
 }
+
+.main-content{
+    height: 100vh;
+    padding: 20px !important;
+}
+
+.title{
+    /*padding: 20px !important;*/
+}
+
+.fileList{
+    height: 50vh;
+}
+
+.dragdrop{
+    height: 50vh;
+}
+
+@media (min-width: 768px) {
+    .ui.vertical.menu.leftbar {
+      visibility: visible;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+      width: 15rem !important;
+    }
+    .main-content {
+      margin-left: 15rem;
+    }
+    .sidebar-menu-toggler {
+      display: none !important;
+    }
+  }

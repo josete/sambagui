@@ -6,6 +6,7 @@ var loadIniFile = require('read-ini-file');
 var app = express();
 
 handlebars.registerPartial('leftbar', fs.readFileSync('./public/templates/leftbar.hbs').toString());
+handlebars.registerPartial('files', fs.readFileSync('./public/templates/files.hbs').toString());
 
 app.use(express.static(__dirname + '/public'));
 
