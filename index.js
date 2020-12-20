@@ -18,10 +18,16 @@ app.get('/', (req, res) => {
     delete shares['homes'];
     delete shares['printers'];
     delete shares['print$'];
-    const sharesTitles = {shares:Object.keys(shares)};
+    var dataFiles = []
+    Object.keys(shares).forEach(name => {
+        dataFiles.push(getFilesInFolder(name,shares[name].path));    
+    });    
+    //const sharesTitles = {shares:Object.keys(shares)};
     var templateText = fs.readFileSync('./public/templates/main.hbs');
     var template = handlebars.compile(templateText.toString());
-    var html = template(sharesTitles);
+    var data = {shares:Object.keys(shares),filesInfo:dataFiles}
+    console.log(data);
+    var html = template(data);
     res.type('text/html')
     res.send(html);
 });
@@ -32,3 +38,23 @@ app.listen(3000, (err) => {
         process.exit(1);
     }
 });
+
+function getFilesInFolder(title,folder){
+    try{
+        var files = fs.readdirSync(folder);
+        var filesData = []
+        files.forEach(element => filesData.push({fileName:element,icon:getExtensionIcon(path.extname(element))}));
+        return {title:title,filesData:filesData}
+    }catch{
+        return {};
+    }
+}
+
+function getExtensionIcon(extension){
+    switch(extension){
+        case ".avi":
+            return "file video outline";
+        case ".mkv":
+            return "file video outline";
+    }
+}

@@ -32,7 +32,18 @@
 }
 
 .dragdrop{
-    height: 50vh;
+    height: 30vh !important;
+    display: table;
+    border: 4px dashed black;
+    width: 100%;
+    height: 100%;
+    font-size: 1.3em;
+}
+
+.dragdrop i{
+    display: table-cell;
+  vertical-align: middle;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
